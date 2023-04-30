@@ -1,0 +1,142 @@
+body{
+    background-color: #E5E5E5;
+}
+main{
+    display: grid;
+    grid-template-areas: "head head cont"
+                         "vacio form cont"
+                         "vacio form cont";
+    grid-template-columns: 15% 50% 35%;
+    grid-template-rows: 90px 425px 425px;
+   
+}
+header{
+    grid-area: head;
+}
+.logo{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.formulario{
+    grid-area: form;
+    
+}
+.formTable{
+    display: grid;
+    grid-template-areas: "texto texto"
+                         "vacio vacio"
+                         "etiqeta etiqueta"
+                         "boton1 boton2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 54px 635px 30px 50px;
+}
+.inputTexto{
+    grid-area: texto;
+    width: 500px;
+    height: 48px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color:#0A3871;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+.inputTexto::placeholder{
+    color:#0A3871;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+} 
+.etiqueta{
+    grid-area: etiqueta;
+    grid-column-start: 1;
+}
+.btnEncriptar{
+    grid-area: boton1;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #0A3871;
+    width: 320px;
+    height: 50px;
+}
+.btnDesencriptar{
+    grid-area: boton2;
+    margin-left: 25px;
+    border-radius: 20px;
+    color: #0A3871;
+    width: 320px;
+    height: 50px;
+}
+.cajaRespuesta{
+    grid-area: cont;
+    background-color: #FFFFFF;
+    margin:40px;
+    width: 400px;
+    height: 860px;
+    box-shadow: 0px 24px 32px -8px;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+.muñeco{
+    margin: 32px;
+    margin-top: 243px;
+}
+.mensaje{
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bold;
+}
+.salida{
+   text-align: center;
+   font-size: 20px;
+}
+@media screen and (max-width:480px){
+    main{
+        display: grid;
+        grid-template-areas: "head head "
+                             "form form "
+                             "cont cont "
+                         ;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px  835px 200;
+    }
+    .formTable{
+        display: grid;
+        grid-template-areas: "texto texto"
+                             "vacio vacio"
+                             "etiqeta etiqueta"
+                             "boton1 boton2";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 54px 500px 30px 30px;
+    }
+    .inputTexto{
+        width: 400px;
+        height: 48px;
+    }
+    .cajaRespuesta{
+        display: inline-block;
+        width: 400px;
+        height:100x;
+    }
+    .muñeco{
+        margin: 32px;
+    }
+    .mensaje{
+        font-size: 30px;
+    }
+    .salida{
+        font-size: 15px;
+     }
+    
+}
